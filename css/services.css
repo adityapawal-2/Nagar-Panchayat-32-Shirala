@@ -1,0 +1,19 @@
+.svc-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  height: 100%;
+  transition: 0.3s;
+}
+.svc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: transparent; }
+.svc-icon {
+  width: 62px; height: 62px;
+  border-radius: 16px;
+  background: var(--forest-light);
+  color: var(--forest);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.7rem;
+  margin: 0 auto 1rem;
+}

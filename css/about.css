@@ -1,0 +1,5 @@
+.about-card { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.about-card img { height: 320px; object-fit: cover; width: 100%; }
+.info-table th { background: var(--forest-light); color: var(--forest-dark); width: 40%; }
+.info-table td, .info-table th { padding: 0.85rem 1rem; vertical-align: middle; }
+.info-table { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }

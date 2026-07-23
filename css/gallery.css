@@ -1,0 +1,10 @@
+.gallery-img {
+  height: 260px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  transition: 0.35s;
+  box-shadow: var(--shadow);
+}
+.gallery-img:hover { transform: scale(1.03); }
+.gallery-frame { position: relative; overflow: hidden; border-radius: var(--radius); }

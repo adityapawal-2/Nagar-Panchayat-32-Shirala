@@ -1,0 +1,264 @@
+/* ============================================================
+   नगरपंचायत 32 शिराळा — Common Design System
+   Palette: Forest (governance) + Saffron (civic warmth) + Cream
+   ============================================================ */
+
+:root {
+  --forest: #0b4d3a;
+  --forest-dark: #073226;
+  --forest-light: #e7f1ec;
+  --saffron: #e08d3c;
+  --saffron-dark: #c06f22;
+  --gold: #c9a227;
+  --cream: #fbf7ee;
+  --paper: #ffffff;
+  --ink: #1b2420;
+  --ink-soft: #4c5a52;
+  --line: #e3ddce;
+  --radius: 14px;
+  --shadow: 0 10px 30px -12px rgba(11, 77, 58, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5,
+.font-display {
+  font-family: 'Tiro Devanagari Marathi', 'Noto Serif Devanagari', serif;
+  color: var(--forest-dark);
+}
+
+/* Tricolor strip — the signature: every page opens under India's civic colors */
+.tricolor-strip {
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--saffron) 0 33.33%, #ffffff 33.33% 66.66%, var(--forest) 66.66% 100%);
+}
+
+/* ---------- Disclaimer ribbon ---------- */
+.disclaimer-ribbon {
+  background: #fff4e0;
+  color: #7a4a06;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-bottom: 1px solid #f0d9ad;
+  letter-spacing: 0.2px;
+}
+
+.footer-disclaimer {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.4rem;
+}
+
+/* ---------- Navbar ---------- */
+.np-navbar {
+  background: var(--forest-dark) !important;
+  padding: 0.6rem 0;
+  border-bottom: 3px solid var(--saffron);
+}
+
+.np-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: 'Tiro Devanagari Marathi', serif;
+  font-size: 1.25rem;
+  color: #fff !important;
+  letter-spacing: 0.2px;
+}
+
+.np-seal {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--saffron), var(--saffron-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--forest-dark);
+  font-size: 1rem;
+  border: 2px solid var(--gold);
+  flex-shrink: 0;
+}
+
+.np-navbar .nav-link {
+  color: rgba(255,255,255,0.82) !important;
+  font-weight: 500;
+  margin: 0 0.15rem;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 8px;
+  transition: 0.25s;
+  font-size: 0.96rem;
+}
+
+.np-navbar .nav-link:hover { color: #fff !important; background: rgba(255,255,255,0.08); }
+.np-navbar .nav-link.active {
+  color: var(--forest-dark) !important;
+  background: var(--saffron);
+  font-weight: 600;
+}
+
+/* ---------- Section rhythm ---------- */
+.section-eyebrow {
+  color: var(--saffron-dark);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.section-rule {
+  width: 64px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--saffron), var(--forest));
+  margin: 0 auto 2.2rem;
+}
+
+.section-rule.start { margin: 0 0 2rem; }
+
+/* ---------- Cards ---------- */
+.np-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.np-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-color: transparent;
+}
+
+.np-card img { object-fit: cover; }
+
+.np-badge-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--forest-light);
+  color: var(--forest);
+  font-size: 1.4rem;
+  margin-bottom: 0.9rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn-np {
+  background: var(--forest);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  transition: 0.25s;
+}
+.btn-np:hover { background: var(--forest-dark); color: #fff; }
+
+.btn-np-outline {
+  background: transparent;
+  border: 1.5px solid var(--forest);
+  color: var(--forest);
+  font-weight: 600;
+  padding: 0.5rem 1.3rem;
+  border-radius: 999px;
+  transition: 0.25s;
+}
+.btn-np-outline:hover { background: var(--forest); color: #fff; }
+
+/* ---------- Notice ticker (replaces <marquee>) ---------- */
+.ticker-bar {
+  background: var(--forest-dark);
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.ticker-label {
+  background: var(--saffron);
+  color: var(--forest-dark);
+  font-weight: 700;
+  padding: 0.5rem 1.1rem;
+  flex-shrink: 0;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+}
+.ticker-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: ticker-scroll 26s linear infinite;
+  font-size: 0.92rem;
+}
+.ticker-track span { margin-right: 3.5rem; opacity: 0.95; }
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+}
+
+/* ---------- Footer ---------- */
+.np-footer {
+  background: var(--forest-dark);
+  color: rgba(255,255,255,0.85);
+  padding: 3rem 0 1.2rem;
+}
+.np-footer h5 { color: #fff; font-family: 'Tiro Devanagari Marathi', serif; }
+.np-footer a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: 0.2s;
+}
+.np-footer a:hover { color: var(--saffron); padding-left: 3px; }
+.np-footer hr { border-color: rgba(255,255,255,0.15); }
+.footer-bottom {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  padding-top: 1.2rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ---------- Page header (inner pages) ---------- */
+.page-hero {
+  background: linear-gradient(135deg, var(--forest-dark), var(--forest));
+  color: #fff;
+  padding: 3.2rem 0 3.6rem;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::after {
+  content: "";
+  position: absolute;
+  right: -60px; top: -60px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  border: 18px solid rgba(255,255,255,0.06);
+}
+.page-hero h2 { color: #fff; margin-bottom: 0.5rem; }
+.page-hero p { color: rgba(255,255,255,0.8); max-width: 640px; margin: 0 auto; }
+.breadcrumb-np { color: var(--saffron); font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
+
+.container-np { max-width: 1140px; }
