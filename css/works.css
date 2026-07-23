@@ -1,5 +1,4 @@
 .work-card img { height: 220px; object-fit: cover; width: 100%; }
-.status-table { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .status-table th { background: var(--forest-dark); color: #fff; }
 .badge-done { background: var(--forest); }
 .badge-progress { background: var(--saffron); color: var(--forest-dark); }

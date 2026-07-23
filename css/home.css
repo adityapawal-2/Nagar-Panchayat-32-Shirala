@@ -81,6 +81,18 @@
   border: 3px solid var(--saffron);
   margin-bottom: 0.9rem;
 }
+.chair-avatar {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--forest-light), #d7e8de);
+  border: 3px solid var(--saffron);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  margin: 0 auto 0.9rem;
+  color: var(--forest);
+}
 
 .service-tile {
   border-radius: var(--radius);

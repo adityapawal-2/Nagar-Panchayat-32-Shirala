@@ -21,6 +21,8 @@
 
 * { box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body {
   background: var(--cream);
   color: var(--ink);
@@ -262,3 +264,13 @@ h1, h2, h3, h4, h5,
 .breadcrumb-np { color: var(--saffron); font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
 
 .container-np { max-width: 1140px; }
+
+/* ---------- Table wrapper (fixes bordered-table corner clipping) ---------- */
+.table-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--paper);
+}
+.table-card table { margin-bottom: 0; }
+
